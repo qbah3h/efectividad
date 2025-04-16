@@ -37,7 +37,7 @@ function getPuntajeEficacia(porcentaje) {
     return 5;
 }
 
-// eficiencia recibe un numero que puede ser decimal
+// eficiencia recibe un numero que puede ser decimal, ya que es un cociente
 function getPuntajeEficiencia(porcentaje) {
     if (porcentaje > 1) return 5;
     if (porcentaje == 1) return 3;
