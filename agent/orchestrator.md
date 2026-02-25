@@ -1,7 +1,0 @@
-Product owner:
-
-
-Analyst:
-
-
-Tester:
