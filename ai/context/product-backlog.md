@@ -39,7 +39,7 @@
 | ID | User Story | Status | Commit(s) |
 |----|-----------|--------|-----------|
 | PB-014 | **Code review workflow:** As a developer, I want a Windsurf workflow (`.windsurf/workflows/review.md`) for reviewing code changes for bugs, security issues, and improvements. | ✅ Done | `665bfca` |
-| PB-015 | **Product Backlog:** As a product owner, I need a `SCRUM/product-backlog.md` file that serves as the project's "database" — tracking what was built, why, and in what order. | ✅ Done | current |
+| PB-015 | **Product Backlog:** As a product owner, I need a `ai/context/product-backlog.md` file that serves as the project's "database" — tracking what was built, why, and in what order. | ✅ Done | current |
 
 ---
 

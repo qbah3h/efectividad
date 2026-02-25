@@ -54,4 +54,4 @@
 
 ## Backlog Location
 
-[Path to the Product Backlog file, e.g., `SCRUM/product-backlog.md`]
+[Path to the Product Backlog file, e.g., `ai/context/product-backlog.md`]
