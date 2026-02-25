@@ -1,3 +1,8 @@
+/* ==========================================================================
+   Effectiveness Calculator – Stylesheet
+   ========================================================================== */
+
+/* --- Layout: main page container --- */
 .container {
     max-width: 1200px;
     margin: 20px auto;
@@ -5,12 +10,14 @@
     font-family: Arial, sans-serif;
 }
 
+/* --- Layout: side-by-side calculator panels --- */
 .calculators-container {
     display: flex;
     gap: 20px;
     justify-content: space-between;
 }
 
+/* --- Component: individual calculator card --- */
 .calculator {
     flex: 1;
     padding: 20px;
@@ -18,27 +25,32 @@
     border-radius: 8px;
 }
 
+/* --- Form: input field grid --- */
 .input-group {
     display: grid;
     gap: 15px;
     margin-bottom: 20px;
 }
 
+/* --- Form: single input wrapper --- */
 .input-field {
     display: flex;
     flex-direction: column;
 }
 
+/* --- Form: label spacing --- */
 label {
     margin-bottom: 5px;
 }
 
+/* --- Form: text input styling --- */
 input {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
+/* --- Form: submit button --- */
 button {
     padding: 10px 20px;
     background-color: #007bff;
@@ -49,10 +61,12 @@ button {
     width: 100%;
 }
 
+/* --- Utility: hide elements --- */
 .hidden {
     display: none;
 }
 
+/* --- Results: individual result row --- */
 .result-item {
     margin: 10px 0;
     padding: 10px;
@@ -60,6 +74,7 @@ button {
     border-radius: 4px;
 }
 
+/* --- Results: container for all result rows --- */
 .results {
     margin-top: 20px;
 }

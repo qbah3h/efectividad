@@ -1,98 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Calculadora de Efectividad</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effectiveness Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Comparador de Efectividad</h1>
+        <h1>Effectiveness Comparator</h1>
         <div class="calculators-container">
             <div class="calculator">
-                <h2>Calculadora 1</h2>
+                <h2>Calculator 1</h2>
                 <form id="calcForm1" class="calc-form">
                     <div class="input-group">
                         <div class="input-field">
-                            <label for="re1">Resultado Esperado (RE):</label>
-                            <input type="number" id="re1" required>
+                            <label for="expectedResult1">Expected Result (ER):</label>
+                            <input type="number" id="expectedResult1" required>
                         </div>
                         <div class="input-field">
-                            <label for="ra1">Resultado Alcanzado (RA):</label>
-                            <input type="number" id="ra1" required>
+                            <label for="achievedResult1">Achieved Result (AR):</label>
+                            <input type="number" id="achievedResult1" required>
                         </div>
                         <div class="input-field">
-                            <label for="ce1">Costo Esperado (CE):</label>
-                            <input type="number" id="ce1" required>
+                            <label for="expectedCost1">Expected Cost (EC):</label>
+                            <input type="number" id="expectedCost1" required>
                         </div>
                         <div class="input-field">
-                            <label for="ca1">Costo Actual (CA):</label>
-                            <input type="number" id="ca1" required>
+                            <label for="actualCost1">Actual Cost (AC):</label>
+                            <input type="number" id="actualCost1" required>
                         </div>
                         <div class="input-field">
-                            <label for="te1">Tiempo Esperado (TE):</label>
-                            <input type="number" id="te1" required>
+                            <label for="expectedTime1">Expected Time (ET):</label>
+                            <input type="number" id="expectedTime1" required>
                         </div>
                         <div class="input-field">
-                            <label for="ta1">Tiempo Actual (TA):</label>
-                            <input type="number" id="ta1" required>
+                            <label for="actualTime1">Actual Time (AT):</label>
+                            <input type="number" id="actualTime1" required>
                         </div>
                     </div>
-                    <button type="submit">Calcular</button>
+                    <button type="submit">Calculate</button>
                     <div id="results1" class="hidden results">
-                        <h3>Resultados:</h3>
+                        <h3>Results:</h3>
                         <div class="result-item">
-                            <span>Eficacia:</span> <span id="eficacia1"></span>
+                            <span>Efficacy:</span> <span id="efficacy1"></span>
                         </div>
                         <div class="result-item">
-                            <span>Eficiencia:</span> <span id="eficiencia1"></span>
+                            <span>Efficiency:</span> <span id="efficiency1"></span>
                         </div>
                         <div class="result-item">
-                            <span>Efectividad:</span> <span id="efectividad1"></span>
+                            <span>Effectiveness:</span> <span id="effectiveness1"></span>
                         </div>
                     </div>
                 </form>
             </div>
 
             <div class="calculator">
-                <h2>Calculadora 2</h2>
+                <h2>Calculator 2</h2>
                 <form id="calcForm2" class="calc-form">
                     <div class="input-group">
                         <div class="input-field">
-                            <label for="re2">Resultado Esperado (RE):</label>
-                            <input type="number" id="re2" required>
+                            <label for="expectedResult2">Expected Result (ER):</label>
+                            <input type="number" id="expectedResult2" required>
                         </div>
                         <div class="input-field">
-                            <label for="ra2">Resultado Alcanzado (RA):</label>
-                            <input type="number" id="ra2" required>
+                            <label for="achievedResult2">Achieved Result (AR):</label>
+                            <input type="number" id="achievedResult2" required>
                         </div>
                         <div class="input-field">
-                            <label for="ce2">Costo Esperado (CE):</label>
-                            <input type="number" id="ce2" required>
+                            <label for="expectedCost2">Expected Cost (EC):</label>
+                            <input type="number" id="expectedCost2" required>
                         </div>
                         <div class="input-field">
-                            <label for="ca2">Costo Actual (CA):</label>
-                            <input type="number" id="ca2" required>
+                            <label for="actualCost2">Actual Cost (AC):</label>
+                            <input type="number" id="actualCost2" required>
                         </div>
                         <div class="input-field">
-                            <label for="te2">Tiempo Esperado (TE):</label>
-                            <input type="number" id="te2" required>
+                            <label for="expectedTime2">Expected Time (ET):</label>
+                            <input type="number" id="expectedTime2" required>
                         </div>
                         <div class="input-field">
-                            <label for="ta2">Tiempo Actual (TA):</label>
-                            <input type="number" id="ta2" required>
+                            <label for="actualTime2">Actual Time (AT):</label>
+                            <input type="number" id="actualTime2" required>
                         </div>
                     </div>
-                    <button type="submit">Calcular</button>
+                    <button type="submit">Calculate</button>
                     <div id="results2" class="hidden results">
-                        <h3>Resultados:</h3>
+                        <h3>Results:</h3>
                         <div class="result-item">
-                            <span>Eficacia:</span> <span id="eficacia2"></span>
+                            <span>Efficacy:</span> <span id="efficacy2"></span>
                         </div>
                         <div class="result-item">
-                            <span>Eficiencia:</span> <span id="eficiencia2"></span>
+                            <span>Efficiency:</span> <span id="efficiency2"></span>
                         </div>
                         <div class="result-item">
-                            <span>Efectividad:</span> <span id="efectividad2"></span>
+                            <span>Effectiveness:</span> <span id="effectiveness2"></span>
                         </div>
                     </div>
                 </form>
