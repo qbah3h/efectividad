@@ -12,7 +12,7 @@ Effectiveness Calculator (efectividad)
 
 A web-based Effectiveness Calculator that enables software team leads and managers to measure team/process performance using a formal operations-research framework (Efficacy, Efficiency, Effectiveness) — originally used by the U.S. military and documented by Carlos Alberto Mejía C. (Planning S.A.). The tool bridges the gap between pseudo-metrics (hours logged, tickets closed, OKR scores) and meaningful performance measurement by combining goal attainment with cost/time efficiency into a single comparable metric.
 
-**Strategic direction (Sprint 4+):** Simplify the UI to a single calculator, create concrete mappings to software team data (sprints, story points, OKRs), and validate the framework using a synthetic dataset derived from this project's own completed Product Backlog Items.
+**Strategic direction (Sprint 4+):** Keep the two-calculator Comparator, create concrete mappings to software team data (sprints, story points, OKRs), and validate the framework using a synthetic dataset derived from this project's own completed Product Backlog Items.
 
 ## Target Users
 
@@ -23,7 +23,7 @@ A web-based Effectiveness Calculator that enables software team leads and manage
 
 ## Key Features
 
-- **Single calculator form** to input Expected/Achieved Results, Cost, and Time for one scenario (simplified from two-calculator comparator)
+- **Two side-by-side calculator forms** to input Expected/Achieved Results, Cost, and Time for two scenarios and compare them
 - Computation of Efficacy (goal attainment), Efficiency (resource utilization), and Effectiveness (composite score)
 - Scoring based on the research framework's rating tables (percentage bands for efficacy, ratio thresholds for efficiency)
 - **Software team mapping guide** — documentation explaining how to plug sprint/OKR data into the calculator fields
@@ -65,7 +65,7 @@ OKRs measure *what* was achieved (Key Result target vs actual = Efficacy). This 
 
 ## Current State
 
-Existing codebase with 3 completed Sprints. Core calculator is functional in English with two side-by-side calculators. Research documentation is translated and structured. No automated tests, no deployment, no mobile optimization yet. New strategic direction identified: simplify to single calculator, create software team mappings, build synthetic test dataset.
+Existing codebase with 3 completed Sprints. Core two-calculator Comparator is functional in English. Research documentation is translated and structured. No automated tests, no deployment, no mobile optimization yet. New strategic direction identified: create software team mappings, build synthetic test dataset, add validation, and deploy.
 
 ## Technology Stack
 
@@ -76,7 +76,7 @@ Existing codebase with 3 completed Sprints. Core calculator is functional in Eng
 ## Timeline
 
 - Sprints 1–3 completed (core calculator, bug fixes, documentation/translation)
-- Sprint 4 planned: single calculator simplification, input validation, software team mapping, synthetic dataset, testing
+- Sprint 4 planned: input validation, software team mapping, synthetic dataset, testing, deployment
 - No hard external deadlines — driven by Tyler collaboration and quality
 
 ## Reference Materials

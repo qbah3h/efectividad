@@ -21,13 +21,13 @@
 
 <!-- Add decisions below this line -->
 
-### [2026-02-25] Simplify to single calculator (remove comparator)
+### [2026-02-25] Keep two-calculator Comparator identity
 
-**Context:** The project started as a two-calculator "comparator" but user feedback and strategic direction (Tyler collaboration, simplification for adoption) indicated a single-calculator approach is better for the immediate goal.
-**Decision:** Remove Calculator 2 from the HTML/CSS/JS. Reframe from "Effectiveness Comparator" to "Effectiveness Calculator/Evaluator." Comparison can be re-added later as a separate feature.
-**Alternatives:** (1) Keep both calculators but improve UX, (2) Make second calculator optional/collapsible.
-**Rationale:** Single calculator reduces cognitive load for new users (Tyler). The comparison feature adds complexity that isn't needed to demonstrate the framework's value. Simpler = faster to deploy and share.
-**Impact:** PB-028 created. PB-017 (comparison) and PB-021 (charts) deferred. HTML title changes from "Comparator" to "Calculator."
+**Context:** Initially considered simplifying to a single calculator, but the "Comparator" identity (two side-by-side calculators) is the project's distinguishing feature. Removing it would be a breaking change that risks losing the core value proposition.
+**Decision:** Keep both calculators and the "Effectiveness Comparator" name. PB-017 (comparison summary) and PB-021 (charts) remain in the backlog as planned future enhancements.
+**Alternatives:** (1) Simplify to single calculator — rejected to preserve project identity and avoid breaking changes.
+**Rationale:** The two-calculator layout directly enables scenario comparison, which is the primary use case. Tyler can compare a Sprint measured with story points vs one measured with OKRs, for example.
+**Impact:** PB-028 (single calculator) removed from backlog. PB-017 and PB-021 remain active (not deferred).
 
 ### [2026-02-25] Use completed PBIs as synthetic test dataset
 
@@ -47,7 +47,7 @@
 
 ### [2026-02-25] ADR-001: No architecture changes for Sprint 4
 
-**Context:** New Sprint 4 items (single calculator, validation, dataset, mapping guide, tests, deploy) were assessed for architectural impact.
+**Context:** New Sprint 4 items (validation, dataset, mapping guide, tests, deploy) were assessed for architectural impact.
 **Decision:** No architecture changes needed. The existing vanilla HTML/CSS/JS stack is sufficient. The synthetic dataset will be a static JSON file loaded client-side. Unit tests will use a simple assertion script (no test framework dependency). Deployment is static GitHub Pages.
 **Alternatives:** Considered adding a build step, a test framework (Jest, Mocha), or a JSON loader library.
 **Rationale:** All Sprint 4 items are achievable with the existing stack. Adding build tools or frameworks violates the "no build step" constraint and adds complexity disproportionate to value. The `calculate()` function just needs to be refactored to accept parameters (not just DOM reads) for testability.

@@ -271,23 +271,6 @@ Items are ordered by priority (highest first). All items must meet the Definitio
 
 ---
 
-### PB-028 — Simplify to single calculator
-
-- **User Story:** As a user, I want a single calculator form (instead of two side-by-side) so the tool is simpler to use and focused on evaluating one scenario at a time.
-- **Acceptance Criteria:**
-  - Given I open the page, then I see one calculator form with fields for ER, AR, EC, AC, ET, AT.
-  - Given I click Calculate, then I see Efficacy, Efficiency, and Effectiveness results.
-  - Given the old two-calculator HTML, then Calculator 2 is removed from the page.
-  - Given the simplified layout, then the calculator is centered and visually clean.
-- **Story Points:** 3
-- **Priority:** Must
-- **Status:** To Do
-- **Dependencies:** None
-- **Sprint:** 4 (candidate)
-- **Notes:** Strategic decision to simplify. The comparison feature (PB-017) can be re-added later as a separate view. This is a breaking change from the "comparator" identity — reframe as "Effectiveness Evaluator."
-
----
-
 ### PB-029 — Retrospective estimation of completed PBIs
 
 - **User Story:** As a product owner, I want each completed PBI (PB-001 through PB-015) estimated with ER, AR, EC, AC, ET, AT values so they can serve as a synthetic dataset for testing and demonstration.
@@ -345,9 +328,7 @@ Items are ordered by priority (highest first). All items must meet the Definitio
 |------|--------|--------|
 | PB-019a | **Superseded** by PB-030 | Same intent, now scoped to Tyler's specific needs |
 | PB-019b | **Superseded** by PB-031 | Presets now use real PBI data instead of hypothetical examples |
-| PB-017 | **Deferred** | Comparison feature deferred — single calculator first (PB-028) |
-| PB-021 | **Deferred** | Charts deferred — depends on comparison, which is deferred |
-| PB-028 | **New** | Simplify to single calculator (user request) |
+| PB-028 | **Removed** | Single calculator rejected — keeping two-calculator Comparator identity |
 | PB-029 | **New** | Retrospective PBI estimation for synthetic dataset |
 | PB-030 | **New** | Software team mapping guide for Tyler |
 | PB-031 | **New** | Structured synthetic dataset |
@@ -358,26 +339,22 @@ Items are ordered by priority (highest first). All items must meet the Definitio
 
 | Priority | ID | Item | SP | Dependencies |
 |----------|----|------|----|-------------|
-| 1 | PB-028 | Simplify to single calculator | 3 | None |
-| 2 | PB-016 | Input validation & error handling | 3 | None |
-| 3 | PB-029 | Retrospective PBI estimation | 3 | None |
-| 4 | PB-030 | Software team mapping guide | 5 | None |
-| 5 | PB-031 | Synthetic test dataset (JSON) | 3 | PB-029 |
-| 6 | PB-022 | Unit tests for calculation logic | 3 | PB-031 (uses dataset as fixtures) |
-| 7 | PB-023 | Deploy to GitHub Pages | 2 | PB-016, PB-028 |
-| **Total** | | | **22** | |
+| 1 | PB-016 | Input validation & error handling | 3 | None |
+| 2 | PB-029 | Retrospective PBI estimation | 3 | None |
+| 3 | PB-030 | Software team mapping guide | 5 | None |
+| 4 | PB-031 | Synthetic test dataset (JSON) | 3 | PB-029 |
+| 5 | PB-022 | Unit tests for calculation logic | 3 | PB-031 (uses dataset as fixtures) |
+| 6 | PB-023 | Deploy to GitHub Pages | 2 | PB-016 |
+| **Total** | | | **19** | |
 
 ---
 
 ## Dependency Map
 
 ```
-PB-028 (single calculator)
-  └── PB-023 (deploy) — deploy simplified version
-
 PB-016 (validation)
-  ├── PB-017 (comparison) — deferred, needs valid results
-  ├── PB-021 (charts) — deferred, needs valid data
+  ├── PB-017 (comparison) — needs valid results
+  ├── PB-021 (charts) — needs valid data
   ├── PB-020a (local storage) — only save valid results
   ├── PB-020b (CSV export) — needs valid data
   └── PB-023 (deploy) — fix bugs before publishing
@@ -385,6 +362,9 @@ PB-016 (validation)
 PB-029 (retrospective estimation)
   └── PB-031 (synthetic dataset) — needs estimated values
       └── PB-022 (unit tests) — uses dataset as fixtures
+
+PB-019a (research spike) — superseded by PB-030
+  └── PB-019b (presets) — superseded by PB-031
 
 PB-030 (mapping guide) — independent, can be written in parallel
 
