@@ -245,14 +245,14 @@ Items are ordered by priority (highest first). All items must meet the Definitio
 
 - **User Story:** As a visitor to the GitHub repo, I want a clear README explaining what this project is, how to use the calculator, and the theory behind it so I can understand and contribute.
 - **Acceptance Criteria:**
-  - Given I open the repo, then the README includes: project description, screenshot, usage instructions, link to live demo (once deployed), and link to the research paper.
-  - Given I want to contribute, then the README includes setup instructions (`git clone`, open `index.html`).
+  - Given I open the repo, then the README includes: project description, screenshot, usage instructions, link to live demo (once deployed), and link to the research paper. 
+  - Given I want to contribute, then the README includes setup instructions (`git clone`, open `index.html`). 
 - **Story Points:** 2
 - **Priority:** Should
-- **Status:** To Do
-- **Dependencies:** PB-023 (needs live URL for demo link, but can use placeholder)
-- **Sprint:** 4 (candidate)
-- **Notes:** Currently no user-facing documentation in the repo root.
+- **Status:** DONE
+- **Dependencies:** PB-023 (done)
+- **Sprint:** 4
+- **Notes:** Output: `README.md` at repo root. Screenshot pending (cosmetic, not blocking).
 
 ---
 
