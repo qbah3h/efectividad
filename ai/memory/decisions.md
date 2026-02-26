@@ -32,7 +32,7 @@
 ### [2026-02-25] Use completed PBIs as synthetic test dataset
 
 **Context:** Need test data to validate the calculator, demonstrate the framework, and provide preloaded examples. User suggested using the project's own completed Product Backlog Items (PB-001 through PB-015) as the data source.
-**Decision:** Retrospectively estimate ER, AR, EC (hours), AC (hours), ET (days), AT (days) for each completed PBI. Store as structured JSON in `src/`. Use for unit test fixtures, UI presets, and framework validation.
+**Decision:** Retrospectively estimate ER, AR, EC (hours), AC (hours), ET (days), AT (days) for each completed PBI. Store as structured JSON in `docs/`. Use for unit test fixtures, UI presets, and framework validation.
 **Alternatives:** (1) Fabricate hypothetical data, (2) Use public dataset, (3) Wait for real user data.
 **Rationale:** Real project data (even estimated) is more credible than fabricated data. It dogfoods the framework — measuring the project's own effectiveness. Triple-duty: testing, demos, validation.
 **Impact:** PB-029 (estimation) and PB-031 (JSON dataset) created. PB-019a/b superseded. PB-022 (unit tests) now depends on PB-031 for fixtures.
@@ -40,7 +40,7 @@
 ### [2026-02-25] OKR mapping as documentation, not UI relabeling
 
 **Context:** User read about OKRs and saw the connection to the framework. Tyler tracks OKRs, story points, and sprint metrics. Question: should the calculator UI be relabeled with OKR terms?
-**Decision:** Keep calculator fields generic (ER, AR, EC, AC, ET, AT) per the research paper. Create a separate mapping guide document (`src/SOFTWARE_TEAM_MAPPING.md`) that explains how to translate sprint/OKR data into calculator inputs.
+**Decision:** Keep calculator fields generic (ER, AR, EC, AC, ET, AT) per the research paper. Create a separate mapping guide document (`docs/SOFTWARE_TEAM_MAPPING.md`) that explains how to translate sprint/OKR data into calculator inputs.
 **Alternatives:** (1) Relabel UI fields with OKR terms, (2) Add a mode toggle (generic vs OKR), (3) Only mention OKRs in README.
 **Rationale:** Tyler's DM reveals he needs to understand the mapping, not a relabeled form. The generic fields are more universal (the framework applies beyond OKRs). A mapping guide is the right deliverable to share with Tyler and can be reused.
 **Impact:** PB-030 (mapping guide) created as Must priority for Sprint 4. UI remains unchanged — value is in documentation.

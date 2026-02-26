@@ -93,7 +93,7 @@ Items are ordered by priority (highest first). All items must meet the Definitio
 - **Status:** To Do
 - **Dependencies:** None (PB-016 dependency relaxed — Tyler is a technical user who will follow the mapping guide's example values; NaN on zero inputs is cosmetic, not a security risk)
 - **Sprint:** 4 (candidate)
-- **Notes:** Static site — no build step needed. Configure GitHub Pages to serve from `src/` or root.
+- **Notes:** Static site — no build step needed. Configure GitHub Pages to serve from `docs/` or root.
 
 ---
 
@@ -277,7 +277,7 @@ Items are ordered by priority (highest first). All items must meet the Definitio
 - **Acceptance Criteria:**
   - Given the 15 completed PBIs, then each has estimated values for: Expected Result (story points or deliverable units), Achieved Result, Expected Cost (hours), Actual Cost (hours), Expected Time (days), Actual Time (days).
   - Given the estimates, then assumptions and methodology are documented.
-  - Given the dataset, then it is stored in a structured format (JSON or Markdown table) in the `src/` folder.
+  - Given the dataset, then it is stored in a structured format (JSON or Markdown table) in the `docs/` folder.
 - **Story Points:** 3
 - **Priority:** Must
 - **Status:** To Do
@@ -301,7 +301,7 @@ Items are ordered by priority (highest first). All items must meet the Definitio
 - **Status:** Done
 - **Dependencies:** None
 - **Sprint:** 4
-- **Notes:** Output: `src/SOFTWARE_TEAM_MAPPING.md`. Supersedes PB-019a. This is the deliverable to share with Tyler.
+- **Notes:** Output: `docs/SOFTWARE_TEAM_MAPPING.md`. Supersedes PB-019a. This is the deliverable to share with Tyler.
 
 ---
 
@@ -381,7 +381,7 @@ Independent: PB-018, PB-024, PB-025, PB-026
 
 ---
 
-- **Research paper:** `src/THE_CONCEPTS_OF_EFFECTIVENESS_EFFICIENCY.md` — Carlos Alberto Mejía C., Planning S.A.
-- **Original (Spanish):** `src/LOS_CONCEPTOS_DE_EFECTIVIDAD_EFICIENCIA.pdf`
-- **Context/origin:** `src/information.md` — LinkedIn discussion with Tyler Mann on measuring team performance
+- **Research paper:** `docs/THE_CONCEPTS_OF_EFFECTIVENESS_EFFICIENCY.md` — Carlos Alberto Mejía C., Planning S.A.
+- **Original (Spanish):** `docs/LOS_CONCEPTOS_DE_EFECTIVIDAD_EFICIENCIA.pdf`
+- **Context/origin:** `docs/information.md` — LinkedIn discussion with Tyler Mann on measuring team performance
 - **OKR reference:** https://www.ibm.com/think/topics/okrs — IBM OKR framework overview

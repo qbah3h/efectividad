@@ -81,9 +81,9 @@ Existing codebase with 3 completed Sprints. Core two-calculator Comparator is fu
 
 ## Reference Materials
 
-- **Research paper (English):** `src/THE_CONCEPTS_OF_EFFECTIVENESS_EFFICIENCY.md`
-- **Research paper (Spanish, original):** `src/LOS_CONCEPTOS_DE_EFECTIVIDAD_EFICIENCIA.pdf`
-- **Context / origin story:** `src/information.md` — LinkedIn discussion with Tyler Mann
+- **Research paper (English):** `docs/THE_CONCEPTS_OF_EFFECTIVENESS_EFFICIENCY.md`
+- **Research paper (Spanish, original):** `docs/LOS_CONCEPTOS_DE_EFECTIVIDAD_EFICIENCIA.pdf`
+- **Context / origin story:** `docs/information.md` — LinkedIn discussion with Tyler Mann
 - **OKR reference:** https://www.ibm.com/think/topics/okrs — IBM OKR framework overview
 - **GitHub repo:** https://github.com/qbah3h/efectividad
 

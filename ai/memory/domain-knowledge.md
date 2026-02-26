@@ -38,7 +38,7 @@ The Efficacy/Efficiency/Effectiveness framework from the research paper maps dir
 
 **Key insight:** OKRs measure *what* was achieved. This framework measures *how effectively* it was achieved — accounting for cost and time. This is the project's unique value proposition.
 
-**Source:** Analysis of IBM OKR article (https://www.ibm.com/think/topics/okrs) cross-referenced with research paper (`src/THE_CONCEPTS_OF_EFFECTIVENESS_EFFICIENCY.md`).
+**Source:** Analysis of IBM OKR article (https://www.ibm.com/think/topics/okrs) cross-referenced with research paper (`docs/THE_CONCEPTS_OF_EFFECTIVENESS_EFFICIENCY.md`).
 **Relevant to:** Product Owner (vision), Analyst (requirements), all agents (framing)
 
 ### Tyler Mann's Data Context
@@ -55,7 +55,7 @@ His key question (DM): *"Achieved results — do you look at stories completed, 
 
 **Answer the framework provides:** You can use any of those as the "Result" dimension — the framework is unit-agnostic. The power is in *adding* the cost/time efficiency dimension that none of those metrics alone provide.
 
-**Source:** `src/information.md` — LinkedIn post, comments, and DM conversation.
+**Source:** `docs/information.md` — LinkedIn post, comments, and DM conversation.
 **Relevant to:** Product Owner (Tyler as primary user), Analyst (requirements scoping)
 
 ### Software Team Metric Mappings

@@ -42,7 +42,7 @@ ai/
 ```
 your-project/
 ├── ai/          ← paste here
-├── src/
+├── docs/
 ├── ...
 ```
 

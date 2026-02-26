@@ -298,7 +298,7 @@ Velocity (story points per sprint) measures throughput — how much work flows t
 
 ## 8. References
 
-- **Research paper:** [The Concepts of Effectiveness, Efficiency, and Efficacy](../src/THE_CONCEPTS_OF_EFFECTIVENESS_EFFICIENCY.md) — Carlos Alberto Mejía C., Planning S.A.
+- **Research paper:** [The Concepts of Effectiveness, Efficiency, and Efficacy](./THE_CONCEPTS_OF_EFFECTIVENESS_EFFICIENCY.md) — Carlos Alberto Mejía C., Planning S.A.
 - **OKR framework:** [IBM — What are OKRs?](https://www.ibm.com/think/topics/okrs)
 - **Calculator:** [Effectiveness Comparator](https://qbah3h.github.io/efectividad/) — try it with your own data
-- **Origin story:** This guide was inspired by a [LinkedIn discussion](../src/information.md) about measuring software team performance beyond pseudo-metrics.
+- **Origin story:** This guide was inspired by a [LinkedIn discussion](./information.md) about measuring software team performance beyond pseudo-metrics.
