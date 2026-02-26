@@ -84,7 +84,7 @@ Key insight: **OKRs and KPIs measure what was achieved. This framework measures 
 
 ## Origin
 
-This project started from a [LinkedIn discussion](docs/information.md) about measuring software team performance beyond pseudo-metrics like velocity and story points. The conversation with Tyler Mann (engineering leader) highlighted that existing metrics measure *activity*, not *performance* — and that a formal framework from operations research could fill the gap.
+This project started from my own investigation into measuring team performance using a formal operations-research framework (originally developed for the U.S. military). About 10 months later, I came across a [LinkedIn post by Tyler Mann](docs/information.md) raising the exact same problem — that existing metrics like velocity and story points measure *activity*, not *performance*. That conversation validated the approach and led to adding the **[Software Team Mapping Guide](docs/SOFTWARE_TEAM_MAPPING.md)**, which maps the framework specifically to sprint-based engineering teams.
 
 ---
 
