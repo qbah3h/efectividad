@@ -14,7 +14,8 @@ ai/
 │   ├── product-owner.md     # Backlog, prioritization, scope
 │   ├── analyst.md           # Requirements, domain understanding
 │   ├── architect.md         # System design, technical decisions
-│   └── tester.md            # Test strategy, quality risks
+│   ├── tester.md            # Test strategy, quality risks
+│   └── improvement-agent.md # Post-task analysis, continuous improvement
 ├── playbooks/               # Reusable workflows
 │   ├── new-project.md       # Onboard AI workforce to a new project
 │   ├── client-feedback.md   # Process incoming client communication
@@ -134,6 +135,7 @@ Process this client feedback: [message]
 | **Analyst** | `ai/agents/analyst.md` | Requirements extraction, domain research, ambiguity detection |
 | **Architect** | `ai/agents/architect.md` | System design, tech decisions, feasibility assessment |
 | **Tester** | `ai/agents/tester.md` | Test strategy, quality risks, acceptance validation |
+| **Improvement Agent** | `ai/agents/improvement-agent.md` | Post-task analysis, instruction refinement, knowledge capture |
 
 ---
 
@@ -219,6 +221,32 @@ Update ai/memory/decisions.md with the architecture decision we just made.
 
 ---
 
+## Continuous Improvement Pipeline
+
+The workforce includes a built-in learning loop triggered automatically after every task:
+
+```
+Task → Orchestrator → Agents execute → Results → Improvement Agent → Instruction Updates
+```
+
+### How it works
+
+1. **Orchestrator** coordinates task execution (Phases 1-3)
+2. **Phase 4 (Mandatory)** — Orchestrator sends an `IMPROVEMENT_REQUEST` to the Improvement Agent
+3. **Improvement Agent** analyzes execution quality and produces a structured report
+4. If instruction updates are warranted, the Improvement Agent proposes **targeted, non-destructive edits**
+5. Orchestrator reviews and applies approved changes
+6. Reusable knowledge is captured in `ai/memory/lessons-learned.md`
+
+### Safety guarantees
+
+- The Orchestrator never edits agent instructions directly
+- Only additive refinements — no destructive rewrites
+- Changes must be generalizable, not overfitted to one task
+- Failures are always analyzed — they are high-priority learning data
+
+---
+
 ## Design Principles
 
 - **Agents are roles** — reusable across projects
@@ -228,3 +256,4 @@ Update ai/memory/decisions.md with the architecture decision we just made.
 - **The Orchestrator is the brain** — not optional, it coordinates everything
 - **Uncertainty is handled explicitly** — agents ask questions instead of assuming
 - **Outputs are contracted** — every agent has defined output formats
+- **Continuous improvement is automatic** — every task triggers learning analysis
