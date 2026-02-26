@@ -298,10 +298,10 @@ Items are ordered by priority (highest first). All items must meet the Definitio
   - Given the document exists, then it references the original research paper and the IBM OKR article.
 - **Story Points:** 5
 - **Priority:** Must
-- **Status:** To Do
+- **Status:** Done
 - **Dependencies:** None
-- **Sprint:** 4 (candidate)
-- **Notes:** Supersedes PB-019a (research spike) — same intent but scoped specifically to Tyler's question and data. Output is `src/SOFTWARE_TEAM_MAPPING.md`. This is the deliverable to share with Tyler.
+- **Sprint:** 4
+- **Notes:** Output: `src/SOFTWARE_TEAM_MAPPING.md`. Supersedes PB-019a. This is the deliverable to share with Tyler.
 
 ---
 
