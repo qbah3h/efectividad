@@ -78,3 +78,21 @@ button {
 .results {
     margin-top: 20px;
 }
+
+/* --- Validation: inline error message text --- */
+.error-message {
+    color: #dc3545;
+    font-size: 0.85em;
+    margin-top: 3px;
+    display: none;
+}
+
+/* --- Validation: show error message when populated --- */
+.error-message.visible {
+    display: block;
+}
+
+/* --- Validation: red border on invalid input --- */
+.input-field.error input {
+    border-color: #dc3545;
+}

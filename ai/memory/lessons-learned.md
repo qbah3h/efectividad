@@ -36,3 +36,9 @@
 **What happened:** Sprint 4 was originally ordered for internal quality (validation → dataset → tests → deploy). When the goal shifted to "present to Tyler ASAP", re-analysis of Tyler's conversation revealed the backlog order was misaligned — the most Tyler-valuable items (mapping guide, deploy, README) were mid-to-late in the sprint.
 **What we learned:** When optimizing for stakeholder presentation speed, prioritize *shareable documentation* and *live access* over internal quality items (tests, validation). Tests don't impress stakeholders; working demos and clear explanations do. A document that answers the stakeholder's exact question (Tyler's DM) is more impactful than a bug-free tool they can't access.
 **Action:** Before finalizing Sprint ordering, always ask: "If I could only deliver 2 items before talking to the stakeholder, which 2?" Put those first.
+
+### [2026-02-26] Validation rules must respect domain semantics, not just prevent errors
+
+**What happened:** During PB-016 (input validation), the initial instinct was to require all fields > 0. But domain analysis revealed AR (Achieved Result) = 0 is a valid measurement (team delivered nothing = 0% efficacy). Blindly requiring > 0 would have rejected a legitimate use case.
+**What we learned:** Input validation is not purely a technical concern — it must be informed by domain knowledge. The Analyst should always review validation rules against the domain model before the Architect designs the implementation. Each field's constraints derive from its role in the formulas (denominator vs numerator) and its real-world meaning.
+**Action:** For any validation task, start by listing each field's role in formulas (denominator? numerator? both?) and its real-world meaning. Derive constraints from both, not just "prevent errors."

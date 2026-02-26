@@ -58,10 +58,10 @@ Items are ordered by priority (highest first). All items must meet the Definitio
   - Given all fields are valid positive numbers, when I click Calculate, then the calculation proceeds normally.
 - **Story Points:** 3
 - **Priority:** Must
-- **Status:** To Do
+- **Status:** ✅ Done
 - **Dependencies:** None
-- **Sprint:** 4 (candidate)
-- **Notes:** Currently no guard against zero inputs — division by zero produces NaN/Infinity in results.
+- **Sprint:** 4
+- **Notes:** Implemented inline validation with per-field error messages. ER/EC/AC/ET/AT must be > 0; AR can be 0 (valid 0% efficacy) but not negative. Errors clear on re-submit. Results hidden when validation fails.
 
 ---
 
@@ -331,7 +331,7 @@ Items are ordered by priority (highest first). All items must meet the Definitio
 |----------|----|------|----|-------------|-------------|
 | 1 | PB-030 | Software team mapping guide | 5 | None | **Direct** — answers his DM question |
 | 2 | PB-023 | Deploy to GitHub Pages | 2 | None (relaxed) | **Direct** — clickable URL |
-| 3 | PB-016 | Input validation & error handling | 3 | None | **Indirect** — polish for public use |
+| 3 | PB-016 | Input validation & error handling | 3 | None | **Indirect** — polish for public use | ✅ Done |
 | 4 | PB-027 | README / user-facing documentation | 2 | PB-023 (placeholder OK) | **Direct** — first thing Tyler sees on repo |
 | 5 | PB-029 | Retrospective PBI estimation | 3 | None | Low — internal data |
 | 6 | PB-031 | Synthetic test dataset (JSON) | 3 | PB-029 | Low — demo data |

@@ -14,6 +14,101 @@
 const MAX_SCORE = 5;
 
 /**
+ * Field definitions for validation.
+ * Each field has a base ID (without the form suffix), a display label,
+ * and whether it must be strictly greater than zero.
+ */
+const FIELD_DEFINITIONS = [
+    { id: 'expectedResult', label: 'Expected Result (ER)', mustBePositive: true },
+    { id: 'achievedResult', label: 'Achieved Result (AR)', mustBePositive: false },
+    { id: 'expectedCost',   label: 'Expected Cost (EC)',   mustBePositive: true },
+    { id: 'actualCost',     label: 'Actual Cost (AC)',     mustBePositive: true },
+    { id: 'expectedTime',   label: 'Expected Time (ET)',   mustBePositive: true },
+    { id: 'actualTime',     label: 'Actual Time (AT)',     mustBePositive: true },
+];
+
+/**
+ * Shows an inline error message for a specific field.
+ * @param {string} fieldId - The full DOM element ID (e.g. "expectedResult1").
+ * @param {string} message - The error message to display.
+ */
+function showFieldError(fieldId, message) {
+    const errorSpan = document.getElementById(`error-${fieldId}`);
+    const inputField = document.getElementById(fieldId);
+    if (errorSpan) {
+        errorSpan.textContent = message;
+        errorSpan.classList.add('visible');
+    }
+    if (inputField) {
+        inputField.parentElement.classList.add('error');
+    }
+}
+
+/**
+ * Clears all validation errors for a given calculator form.
+ * @param {string} formId - The form identifier suffix ("1" or "2").
+ */
+function clearErrors(formId) {
+    FIELD_DEFINITIONS.forEach(function (field) {
+        const fullId = field.id + formId;
+        const errorSpan = document.getElementById(`error-${fullId}`);
+        const inputField = document.getElementById(fullId);
+        if (errorSpan) {
+            errorSpan.textContent = '';
+            errorSpan.classList.remove('visible');
+        }
+        if (inputField) {
+            inputField.parentElement.classList.remove('error');
+        }
+    });
+}
+
+/**
+ * Validates all input fields for a given calculator form.
+ * Shows inline error messages for invalid fields.
+ * @param {string} formId - The form identifier suffix ("1" or "2").
+ * @returns {boolean} True if all fields are valid, false otherwise.
+ */
+function validateForm(formId) {
+    clearErrors(formId);
+    var isValid = true;
+
+    FIELD_DEFINITIONS.forEach(function (field) {
+        var fullId = field.id + formId;
+        var input = document.getElementById(fullId);
+        var rawValue = input.value.trim();
+
+        if (rawValue === '') {
+            showFieldError(fullId, field.label + ' is required.');
+            isValid = false;
+            return;
+        }
+
+        var numValue = Number(rawValue);
+
+        if (isNaN(numValue)) {
+            showFieldError(fullId, field.label + ' must be a number.');
+            isValid = false;
+            return;
+        }
+
+        if (field.mustBePositive && numValue <= 0) {
+            showFieldError(fullId, field.label + ' must be greater than zero.');
+            isValid = false;
+            return;
+        }
+
+        if (!field.mustBePositive && numValue < 0) {
+            showFieldError(fullId, field.label + ' cannot be negative.');
+            isValid = false;
+            return;
+        }
+    });
+
+    return isValid;
+}
+
+/**
  * Reads the numeric value of a form input element.
  * @param {string} elementId - The DOM element ID.
  * @returns {number} The parsed numeric value.
@@ -28,6 +123,11 @@ function getInputValue(elementId) {
  * @param {string} formId - The form identifier suffix ("1" or "2").
  */
 function calculate(formId) {
+    if (!validateForm(formId)) {
+        document.getElementById(`results${formId}`).classList.add('hidden');
+        return;
+    }
+
     const expectedResult = getInputValue(`expectedResult${formId}`);
     const achievedResult = getInputValue(`achievedResult${formId}`);
     const expectedCost = getInputValue(`expectedCost${formId}`);

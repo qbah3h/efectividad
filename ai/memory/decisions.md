@@ -60,3 +60,11 @@
 **Alternatives:** Considered adding a build step, a test framework (Jest, Mocha), or a JSON loader library.
 **Rationale:** All Sprint 4 items are achievable with the existing stack. Adding build tools or frameworks violates the "no build step" constraint and adds complexity disproportionate to value. The `calculate()` function just needs to be refactored to accept parameters (not just DOM reads) for testability.
 **Impact:** `index.js` will need a minor refactor: extract pure calculation logic from DOM-reading logic so functions can be tested independently. No new dependencies.
+
+### [2026-02-26] PB-016: Achieved Result (AR) allowed to be zero
+
+**Context:** PB-016 requires validation to prevent NaN/Infinity from division by zero. The question arose: should AR (Achieved Result) be required > 0 like the other fields?
+**Decision:** AR can be zero (valid 0% efficacy — team delivered nothing) but cannot be negative. All other fields (ER, EC, AC, ET, AT) must be strictly > 0 because they appear as denominators in the efficacy or efficiency formulas.
+**Alternatives:** (1) Require all fields > 0 — rejected because AR=0 is a legitimate measurement. (2) Allow ER=0 too — rejected because ER is a denominator (efficacy = AR/ER).
+**Rationale:** The framework measures goal attainment. Zero achievement is a valid (poor) outcome. Preventing it would be domain-incorrect. The efficiency formula handles AR=0 gracefully (numerator becomes 0, ratio = 0, score = 1).
+**Impact:** `FIELD_DEFINITIONS` array in `index.js` uses `mustBePositive: false` for AR only. All other fields use `mustBePositive: true`.
