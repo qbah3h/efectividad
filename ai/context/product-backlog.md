@@ -271,23 +271,127 @@ Items are ordered by priority (highest first). All items must meet the Definitio
 
 ---
 
+### PB-028 — Simplify to single calculator
+
+- **User Story:** As a user, I want a single calculator form (instead of two side-by-side) so the tool is simpler to use and focused on evaluating one scenario at a time.
+- **Acceptance Criteria:**
+  - Given I open the page, then I see one calculator form with fields for ER, AR, EC, AC, ET, AT.
+  - Given I click Calculate, then I see Efficacy, Efficiency, and Effectiveness results.
+  - Given the old two-calculator HTML, then Calculator 2 is removed from the page.
+  - Given the simplified layout, then the calculator is centered and visually clean.
+- **Story Points:** 3
+- **Priority:** Must
+- **Status:** To Do
+- **Dependencies:** None
+- **Sprint:** 4 (candidate)
+- **Notes:** Strategic decision to simplify. The comparison feature (PB-017) can be re-added later as a separate view. This is a breaking change from the "comparator" identity — reframe as "Effectiveness Evaluator."
+
+---
+
+### PB-029 — Retrospective estimation of completed PBIs
+
+- **User Story:** As a product owner, I want each completed PBI (PB-001 through PB-015) estimated with ER, AR, EC, AC, ET, AT values so they can serve as a synthetic dataset for testing and demonstration.
+- **Acceptance Criteria:**
+  - Given the 15 completed PBIs, then each has estimated values for: Expected Result (story points or deliverable units), Achieved Result, Expected Cost (hours), Actual Cost (hours), Expected Time (days), Actual Time (days).
+  - Given the estimates, then assumptions and methodology are documented.
+  - Given the dataset, then it is stored in a structured format (JSON or Markdown table) in the `src/` folder.
+- **Story Points:** 3
+- **Priority:** Must
+- **Status:** To Do
+- **Dependencies:** None
+- **Sprint:** 4 (candidate)
+- **Notes:** Uses completed PBIs as real-world proxy data. The developer (Heikel) must review and adjust estimates since only he knows actual effort. AI proposes initial estimates based on story points and sprint context.
+
+---
+
+### PB-030 — Software team mapping guide
+
+- **User Story:** As a team lead (specifically Tyler), I want a clear document explaining how to plug my existing sprint/OKR data into the calculator fields so I can use the framework without understanding the underlying math.
+- **Acceptance Criteria:**
+  - Given the document exists, then it maps each calculator field (ER, AR, EC, AC, ET, AT) to concrete software team data (story points planned/done, team hours, sprint days, budget).
+  - Given the document exists, then it includes at least 2 worked examples: (1) Sprint delivery measurement, (2) OKR cycle measurement.
+  - Given the document exists, then it explains what the Effectiveness score tells you that OKRs alone cannot.
+  - Given the document exists, then it answers Tyler's DM question: "Do you look at stories completed, story points, or prove actual ROI?"
+  - Given the document exists, then it references the original research paper and the IBM OKR article.
+- **Story Points:** 5
+- **Priority:** Must
+- **Status:** To Do
+- **Dependencies:** None
+- **Sprint:** 4 (candidate)
+- **Notes:** Supersedes PB-019a (research spike) — same intent but scoped specifically to Tyler's question and data. Output is `src/SOFTWARE_TEAM_MAPPING.md`. This is the deliverable to share with Tyler.
+
+---
+
+### PB-031 — Synthetic test dataset from completed PBIs
+
+- **User Story:** As a developer, I want a structured JSON dataset of the 15 completed PBIs with their estimated values so I can use it for automated testing, preloaded examples, and framework validation.
+- **Acceptance Criteria:**
+  - Given the dataset file exists, then it contains an array of objects, each with: id, name, sprint, ER, AR, EC, AC, ET, AT.
+  - Given the dataset is loaded in the calculator, then calculated Efficacy, Efficiency, and Effectiveness scores are correct per the rating tables.
+  - Given the dataset, then at least 3 PBIs produce different efficacy score bands (0-5) to validate scoring boundaries.
+  - Given the dataset, then at least one PBI has efficiency ratio < 1, one = ~1, and one > 1.
+- **Story Points:** 3
+- **Priority:** Must
+- **Status:** To Do
+- **Dependencies:** PB-029 (needs estimated values first)
+- **Sprint:** 4 (candidate)
+- **Notes:** Dataset serves triple duty: (1) unit test fixtures, (2) preloaded examples in UI, (3) validation of the framework with real-ish data. Replaces PB-019b's preset concept with actual project data.
+
+---
+
+## Backlog Changes Log (Sprint 4 Direction)
+
+| Item | Change | Reason |
+|------|--------|--------|
+| PB-019a | **Superseded** by PB-030 | Same intent, now scoped to Tyler's specific needs |
+| PB-019b | **Superseded** by PB-031 | Presets now use real PBI data instead of hypothetical examples |
+| PB-017 | **Deferred** | Comparison feature deferred — single calculator first (PB-028) |
+| PB-021 | **Deferred** | Charts deferred — depends on comparison, which is deferred |
+| PB-028 | **New** | Simplify to single calculator (user request) |
+| PB-029 | **New** | Retrospective PBI estimation for synthetic dataset |
+| PB-030 | **New** | Software team mapping guide for Tyler |
+| PB-031 | **New** | Structured synthetic dataset |
+
+---
+
+## Sprint 4 Candidates (Proposed)
+
+| Priority | ID | Item | SP | Dependencies |
+|----------|----|------|----|-------------|
+| 1 | PB-028 | Simplify to single calculator | 3 | None |
+| 2 | PB-016 | Input validation & error handling | 3 | None |
+| 3 | PB-029 | Retrospective PBI estimation | 3 | None |
+| 4 | PB-030 | Software team mapping guide | 5 | None |
+| 5 | PB-031 | Synthetic test dataset (JSON) | 3 | PB-029 |
+| 6 | PB-022 | Unit tests for calculation logic | 3 | PB-031 (uses dataset as fixtures) |
+| 7 | PB-023 | Deploy to GitHub Pages | 2 | PB-016, PB-028 |
+| **Total** | | | **22** | |
+
+---
+
 ## Dependency Map
 
 ```
+PB-028 (single calculator)
+  └── PB-023 (deploy) — deploy simplified version
+
 PB-016 (validation)
-  ├── PB-017 (comparison) — needs valid results
-  ├── PB-021 (charts) — needs valid data
+  ├── PB-017 (comparison) — deferred, needs valid results
+  ├── PB-021 (charts) — deferred, needs valid data
   ├── PB-020a (local storage) — only save valid results
   ├── PB-020b (CSV export) — needs valid data
   └── PB-023 (deploy) — fix bugs before publishing
 
-PB-019a (research spike)
-  └── PB-019b (presets) — needs research output
+PB-029 (retrospective estimation)
+  └── PB-031 (synthetic dataset) — needs estimated values
+      └── PB-022 (unit tests) — uses dataset as fixtures
+
+PB-030 (mapping guide) — independent, can be written in parallel
 
 PB-023 (deploy)
   └── PB-027 (README) — needs live URL for demo link
 
-Independent: PB-022, PB-018, PB-024, PB-025, PB-026
+Independent: PB-018, PB-024, PB-025, PB-026
 ```
 
 ---
@@ -297,3 +401,4 @@ Independent: PB-022, PB-018, PB-024, PB-025, PB-026
 - **Research paper:** `src/THE_CONCEPTS_OF_EFFECTIVENESS_EFFICIENCY.md` — Carlos Alberto Mejía C., Planning S.A.
 - **Original (Spanish):** `src/LOS_CONCEPTOS_DE_EFECTIVIDAD_EFICIENCIA.pdf`
 - **Context/origin:** `src/information.md` — LinkedIn discussion with Tyler Mann on measuring team performance
+- **OKR reference:** https://www.ibm.com/think/topics/okrs — IBM OKR framework overview
