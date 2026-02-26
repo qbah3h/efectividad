@@ -1,3 +1,4 @@
+POST:
 Reward effort or outcomes: How should we measure a team?
 
 Many of us say that we don't care how many hours someone works, just that the work gets done
@@ -19,6 +20,7 @@ Many of us resort to pseudo measurements
 How do you measure your teams for success?
 
 ---
+Comments:
 
 Heikel Andres Molina
 
@@ -81,6 +83,7 @@ I really think this is a valuable dialogue. I'm interested to hear what people t
 Or I'll sit alone in the dark pondering 🤔
 
 ---
+Private Message:
 
 Heikel Andres Molina 3:43 PM
 
