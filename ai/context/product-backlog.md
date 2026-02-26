@@ -82,21 +82,6 @@ Items are ordered by priority (highest first). All items must meet the Definitio
 
 ---
 
-### PB-023 — Deploy to GitHub Pages
-
-- **User Story:** As a user, I want to access the calculator at a public URL so I can use it without cloning the repo.
-- **Acceptance Criteria:**
-  - Given the repo is pushed to GitHub, then the app is served at `https://qbah3h.github.io/efectividad/`.
-  - Given the deployment is live, then all calculator functionality works identically to local.
-- **Story Points:** 2
-- **Priority:** Must
-- **Status:** To Do
-- **Dependencies:** None (PB-016 dependency relaxed — Tyler is a technical user who will follow the mapping guide's example values; NaN on zero inputs is cosmetic, not a security risk)
-- **Sprint:** 4 (candidate)
-- **Notes:** Static site — no build step needed. Configure GitHub Pages to serve from `docs/` or root.
-
----
-
 ### PB-017 — Side-by-side comparison summary
 
 - **User Story:** As a user, I want a comparison panel below the calculators that shows both scenarios' results together with the winner highlighted so I can quickly see which scenario is more effective.
