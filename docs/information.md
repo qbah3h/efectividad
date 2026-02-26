@@ -81,39 +81,3 @@ I really think this is a valuable dialogue. I'm interested to hear what people t
 
 
 Or I'll sit alone in the dark pondering 🤔
-
----
-Private Message:
-
-Heikel Andres Molina 3:43 PM
-
-Hello Tyler,
-I saw your post and it immediately reminded me of a project I worked on some months ago: an Effectiveness Calculator that attempts to formalize how to measure team/process performance.
- 
-I was curious, so I gave the project to an LLM to analyze alongside your post and check if they were related. The answer was:
- 
-"Analysis: Is This Project Related to the Post? Yes, directly and deeply. This project is an Effectiveness Calculator ("Comparador de Efectividad") that implements a formal mathematical framework for measuring team/process performance — which is precisely what your post is struggling to define."
- 
-The key idea behind it is that you don't have to choose between measuring effort and outcomes — there's a well-established framework (rooted in operations research, originally used by the U.S. military) that combines both:
- 
-Efficacy — Did we hit the goal? (Achieved Results / Expected Results)
-Efficiency — Did we hit it without burning disproportionate time and cost? (output-per-resource achieved vs. expected)
-Effectiveness — A composite score that blends both into a single, comparable metric.
- 
-This directly addresses the discussion: it's a mix of quantitative and qualitative — raw ratios scored into qualitative bands, then combined.
- 
-Now, fair warning: the project is incomplete and currently in Spanish, so it won't be immediately useful to you as-is. I'm going to take some time to translate it, flesh out the documentation, and think through how it maps to the software team context we both know well. I'll share the English version along with my thoughts soon.
- 
-In the meantime, I'm very open to discussing this further — would love to hear your take on whether this kind of structured framework could work in practice for the teams you're thinking about.
- 
-***Disclaimer: Message enhanced with AI 😁
-
-https://github.com/qbah3h/efectividad
-
-GitHub - qbah3h/efectividad
-github.com
-Tyler Mann sent the following messages at 6:47 PM
-View Tyler’s profile Tyler Mann
-Tyler Mann 6:47 PM
-
-That sounds very interesting!! I would love to see more the details. For example, achieved results - do you look at stories completed, story points, or prove actual ROI from the problem you are solving with what you built?
