@@ -1,47 +1,56 @@
 # Project Constraints
 
-> **Instructions:** Replace this template with your actual project constraints.
 > This file defines the boundaries within which all agents must operate.
 
 ---
 
 ## Technical Constraints
 
-- [e.g., Must run in the browser without a backend]
-- [e.g., Must support IE11]
-- [e.g., No paid third-party dependencies]
+- Must run entirely in the browser — no backend, no server-side logic
+- Vanilla HTML, CSS, JavaScript only — no frameworks (React, Vue, etc.)
+- No build step required — files served directly (static site)
+- No paid third-party dependencies — open-source libraries only if needed
 
 ## Budget Constraints
 
-- [e.g., No paid APIs or services]
-- [e.g., Hosting must be free tier]
+- No paid APIs or services
+- Hosting must be free tier (e.g., GitHub Pages, Netlify free)
+- No paid tools — all development tooling must be free or already available
 
 ## Time Constraints
 
-- [e.g., MVP by March 2026]
-- [e.g., Sprint duration: 2 weeks]
+- No hard external deadlines
+- Sprint cadence: flexible (approximately 1–2 weeks per Sprint)
+- Progress driven by quality and collaboration interest, not time pressure
 
 ## Scope Constraints
 
-- [e.g., Single-language support only for v1]
-- [e.g., No user authentication in MVP]
+- English-only UI for current version (original Spanish version was replaced, not maintained in parallel)
+- No user authentication or accounts
+- No backend / database — all computation is client-side
+- Two-scenario comparison only (not N-scenario)
+- Framework limited to the Efficacy/Efficiency/Effectiveness model from the research paper
 
 ## Team Constraints
 
-- [e.g., Solo developer]
-- [e.g., No dedicated QA resource — testing is developer responsibility]
+- Solo developer (Heikel Andres Molina)
+- No dedicated QA resource — testing is developer responsibility
+- AI workforce (`ai/` folder) assists with planning, analysis, and code review
 
 ## Regulatory / Compliance
 
-- [e.g., WCAG 2.1 AA accessibility required]
-- [e.g., GDPR compliance required]
+- No regulatory requirements for MVP
+- Accessibility (WCAG 2.1 AA) is a nice-to-have, not a hard requirement yet
 
 ## Design Constraints
 
-- [e.g., Must follow existing brand guidelines]
-- [e.g., Mobile-first responsive design]
+- No existing brand guidelines — clean, functional UI is sufficient
+- Responsive design desired but not yet implemented
+- No design system or component library — CSS is hand-written
 
 ## Methodology
 
-- [e.g., Scrum with 2-week Sprints]
-- [e.g., Hybrid approach acceptable when constraints require it]
+- Scrum-inspired with flexible Sprint cadence
+- Product Backlog maintained in `ai/context/product-backlog.md`
+- AI agents assist with Scrum ceremonies (refinement, review)
+- Hybrid approach acceptable when constraints require it
