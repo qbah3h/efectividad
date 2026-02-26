@@ -45,6 +45,14 @@
 **Rationale:** Tyler's DM reveals he needs to understand the mapping, not a relabeled form. The generic fields are more universal (the framework applies beyond OKRs). A mapping guide is the right deliverable to share with Tyler and can be reused.
 **Impact:** PB-030 (mapping guide) created as Must priority for Sprint 4. UI remains unchanged — value is in documentation.
 
+### [2026-02-25] Sprint 4 reordered for "Tyler-first" delivery
+
+**Context:** Original Sprint 4 ordering (PB-016 → PB-029 → PB-030 → PB-031 → PB-022 → PB-023) was optimized for internal quality. New constraint: present to Tyler as soon as possible.
+**Decision:** Reorder Sprint 4 to prioritize Tyler-facing deliverables: PB-030 (mapping guide) → PB-023 (deploy) → PB-016 (validation) → PB-027 (README, promoted) → PB-029 → PB-031 → PB-022. Relax PB-023's dependency on PB-016 (NaN on zero inputs is cosmetic, not security). Promote PB-027 into Sprint 4 (+2 SP, total 21 SP).
+**Alternatives:** (1) Keep original ordering — rejected because Tyler would wait 2+ weeks for anything shareable. (2) Split into two mini-sprints — unnecessary overhead for a solo dev.
+**Rationale:** PB-030 (mapping guide) directly answers Tyler's DM question and can be shared standalone. PB-023 (deploy) gives Tyler a clickable URL. PB-027 (README) is the first thing Tyler sees when he visits the repo link already shared in DM. Internal items (PB-029/031/022) are deprioritized — they add zero value for Tyler's evaluation.
+**Impact:** Sprint 4 renamed "Tyler-Ready". Sprint Goal defined. PB-023 dependency relaxed. PB-027 promoted from Unassigned to Sprint 4. Total SP increased from 19 to 21.
+
 ### [2026-02-25] ADR-001: No architecture changes for Sprint 4
 
 **Context:** New Sprint 4 items (validation, dataset, mapping guide, tests, deploy) were assessed for architectural impact.

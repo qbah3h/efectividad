@@ -91,7 +91,7 @@ Items are ordered by priority (highest first). All items must meet the Definitio
 - **Story Points:** 2
 - **Priority:** Must
 - **Status:** To Do
-- **Dependencies:** PB-016 (should fix critical bugs before publishing)
+- **Dependencies:** None (PB-016 dependency relaxed — Tyler is a technical user who will follow the mapping guide's example values; NaN on zero inputs is cosmetic, not a security risk)
 - **Sprint:** 4 (candidate)
 - **Notes:** Static site — no build step needed. Configure GitHub Pages to serve from `src/` or root.
 
@@ -221,7 +221,7 @@ Items are ordered by priority (highest first). All items must meet the Definitio
 - **Status:** To Do
 - **Dependencies:** PB-016 (only valid results should be saved)
 - **Sprint:** Unassigned
-- **Notes:** Split from original PB-020. Simplest persistence option — no server needed.
+- **Notes:** Simplest persistence option — no server needed.
 
 ---
 
@@ -265,8 +265,8 @@ Items are ordered by priority (highest first). All items must meet the Definitio
 - **Story Points:** 2
 - **Priority:** Should
 - **Status:** To Do
-- **Dependencies:** PB-023 (needs live URL for demo link)
-- **Sprint:** Unassigned
+- **Dependencies:** PB-023 (needs live URL for demo link, but can use placeholder)
+- **Sprint:** 4 (candidate)
 - **Notes:** Currently no user-facing documentation in the repo root.
 
 ---
@@ -332,20 +332,26 @@ Items are ordered by priority (highest first). All items must meet the Definitio
 | PB-029 | **New** | Retrospective PBI estimation for synthetic dataset |
 | PB-030 | **New** | Software team mapping guide for Tyler |
 | PB-031 | **New** | Structured synthetic dataset |
+| Sprint 4 | **Reordered** "Tyler-first" | Prioritize stakeholder-facing items (PB-030, PB-023, PB-027) over internal quality |
+| PB-023 | **Dependency relaxed** | PB-016 dependency removed — NaN on zero is cosmetic, not security |
+| PB-027 | **Promoted** to Sprint 4 | Tyler already has the GitHub link; repo needs a README |
 
 ---
 
-## Sprint 4 Candidates (Proposed)
+## Sprint 4 — "Tyler-Ready" (Proposed)
 
-| Priority | ID | Item | SP | Dependencies |
-|----------|----|------|----|-------------|
-| 1 | PB-016 | Input validation & error handling | 3 | None |
-| 2 | PB-029 | Retrospective PBI estimation | 3 | None |
-| 3 | PB-030 | Software team mapping guide | 5 | None |
-| 4 | PB-031 | Synthetic test dataset (JSON) | 3 | PB-029 |
-| 5 | PB-022 | Unit tests for calculation logic | 3 | PB-031 (uses dataset as fixtures) |
-| 6 | PB-023 | Deploy to GitHub Pages | 2 | PB-016 |
-| **Total** | | | **19** | |
+**Sprint Goal:** Enable Tyler to understand and use the Effectiveness framework with his own team data, via a live tool and mapping guide.
+
+| Priority | ID | Item | SP | Dependencies | Tyler Value |
+|----------|----|------|----|-------------|-------------|
+| 1 | PB-030 | Software team mapping guide | 5 | None | **Direct** — answers his DM question |
+| 2 | PB-023 | Deploy to GitHub Pages | 2 | None (relaxed) | **Direct** — clickable URL |
+| 3 | PB-016 | Input validation & error handling | 3 | None | **Indirect** — polish for public use |
+| 4 | PB-027 | README / user-facing documentation | 2 | PB-023 (placeholder OK) | **Direct** — first thing Tyler sees on repo |
+| 5 | PB-029 | Retrospective PBI estimation | 3 | None | Low — internal data |
+| 6 | PB-031 | Synthetic test dataset (JSON) | 3 | PB-029 | Low — demo data |
+| 7 | PB-022 | Unit tests for calculation logic | 3 | PB-031 (uses dataset as fixtures) | None — internal quality |
+| **Total** | | | **21** | | |
 
 ---
 
@@ -356,8 +362,7 @@ PB-016 (validation)
   ├── PB-017 (comparison) — needs valid results
   ├── PB-021 (charts) — needs valid data
   ├── PB-020a (local storage) — only save valid results
-  ├── PB-020b (CSV export) — needs valid data
-  └── PB-023 (deploy) — fix bugs before publishing
+  └── PB-020b (CSV export) — needs valid data
 
 PB-029 (retrospective estimation)
   └── PB-031 (synthetic dataset) — needs estimated values
@@ -366,17 +371,15 @@ PB-029 (retrospective estimation)
 PB-019a (research spike) — superseded by PB-030
   └── PB-019b (presets) — superseded by PB-031
 
-PB-030 (mapping guide) — independent, can be written in parallel
+PB-030 (mapping guide) — independent, HIGHEST PRIORITY for Tyler
 
-PB-023 (deploy)
-  └── PB-027 (README) — needs live URL for demo link
+PB-023 (deploy) — dependency on PB-016 relaxed (2026-02-25)
+  └── PB-027 (README) — needs live URL (placeholder OK)
 
 Independent: PB-018, PB-024, PB-025, PB-026
 ```
 
 ---
-
-## Source Material
 
 - **Research paper:** `src/THE_CONCEPTS_OF_EFFECTIVENESS_EFFICIENCY.md` — Carlos Alberto Mejía C., Planning S.A.
 - **Original (Spanish):** `src/LOS_CONCEPTOS_DE_EFECTIVIDAD_EFICIENCIA.pdf`
